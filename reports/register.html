@@ -27,7 +27,7 @@
 
 <form name="usr_info" method="post">
   <div class="row">
-      <div class="col-md-12 text-start bg-primary text-white">기본 정보</div>
+    <div class="col-md-12 text-start bg-primary text-white">기본 정보</div>
     <div class="col-sm-6">
       <div class="mb-3">
         <label for="name">이름<span class="star">*</span></label>
@@ -90,41 +90,23 @@
   </div>
 </div>
 
-  <div class="row mt-3">
-  <div class="col-md-12 text-start bg-secondary text-white">업무 경력</div>
-  <div class="col-sm-6">
-    <div class="mb-3">
-      <label>최종 직위</label>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="직위" id="g1" value="employee" checked>
-        <label class="form-check-label" for="g1">사원급</label>
+  <div>
+    <p class="text-start bg-secondary text-white">업무 경력</p>
+      <div>
+        <label>최종 직위<input type="radio" name="직위" id="g1" value="employee" checked>사원급</label>
+        <input type="radio" name="직위" id="g2" value="chief"><label for="g2">대리 ~ 과장</label>
+        <input type="radio" name="직위" id="g3" value="head"><label for="g3">차장급 이상</label>
+        <label><input type="radio" name="직위" id="g4" value="board">임원급</label>
       </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="직위" id="g2" value="chief">
-        <label class="form-check-label" for="g2">대리 ~ 과장</label>
+      <div>
+        <label>주요 담당 업무</label>
+        <textarea id="comments" name="comments" cols="80" rows="10" placeholder="담당했던 주요 업무를 기술하시오." class="form-control"></textarea>
       </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="직위" id="g3" value="head">
-        <label class="form-check-label" for="g3">차장급 이상</label>
+      <div class="button-container">
+        <p><button type="submit" class="btn btn-outline-primary">제출</button>
+        <button type="reset" class="btn btn-outline-primary">재작성</button></p></div>
       </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="직위" id="g4" value="board">
-        <label class="form-check-label" for="g4">임원급</label>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label>주요 담당 업무</label>
-      <textarea id="comments" name="comments" cols="80" rows="10" placeholder="담당했던 주요 업무를 기술하시오." class="form-control"></textarea>
-    </div>
-  </div>
-</div>
 
-  <div class="button-container">
-    <p>
-      <button type="submit" class="btn btn-outline-primary">제출</button>
-      <button type="reset" class="btn btn-outline-primary">재작성</button>
-    </p>
-  </div>
 </form>
 </div>
 </body>
