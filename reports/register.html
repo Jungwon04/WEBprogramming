@@ -13,9 +13,23 @@
     margin-right: 5px;
   }
 
-
   .button-container {
     text-align: center;
+  }
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-group {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 576px) {
+    .form-group {
+      flex-basis: 100%;
+    }
   }
 
 </style>
@@ -27,54 +41,77 @@
   <p><span class="star">*</span>필수 입력 항목</p>
 
 <form name="usr_info" method="post">
-  <div>
-    <p class="text-start bg-primary text-white">기본 정보</p>
-    <p><label for="name">이름<span class="star">*</span></label></p>
-    <p><input type="text" id="name" name="name" size="8"></p>
-    <p><label for="email">이메일<span class="star">*</span></label></p>
-    <p><input type="email" name="email" id="email" size="15" placeholder="id@domain_name"></p>
-    <p><label for ="pwd">암호<span class="star">*</span></label></p>
-    <p><input type="password" id="pwd" name="pwd" size="12" placeholder="암호"></p>
-    <p><label for="c_pwd">암호 확인<span class="star">*</span></label></p>
-    <p><input type="password" id="c_pwd" name="c_pwd" size="12" placeholder="암호 확인"></p>
-    <p><label for="phone">모바일 폰<span class="star">*</span></label></p>
-    <p><input type="tel" name="phone" id="phone" size="13" placeholder="010-0000-0000"></p>
-    <p><label for="homepage">홈 페이지</label></p>
-    <p><input type="url" name="homepage" id="homepage" size="30" placeholder="http://"></p>
-    <p><label for="address">주소<span class="star">*</span></label></p>
-    <p><input type="text" id="address" name="address" size="30"></p>
+  <p class="text-start bg-primary text-white">기본 정보</p>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="name">이름<span class="star">*</span></label>
+      <input type="text" id="name" name="name" size="8">
+    </div>
+    <div class="form-group">
+      <label for="email">이메일<span class="star">*</span></label>
+      <input type="email" name="email" id="email" size="15" placeholder="id@domain_name">
+    </div>
+    <div class="form-group">
+      <label for ="pwd">암호<span class="star">*</span></label>
+      <input type="password" id="pwd" name="pwd" size="12" placeholder="암호">
+    </div>
+    <div class="form-group">
+      <label for="c_pwd">암호 확인<span class="star">*</span></label>
+      <input type="password" id="c_pwd" name="c_pwd" size="12" placeholder="암호 확인">
+    </div>
+    <div class="form-group">
+      <label for="phone">모바일 폰<span class="star">*</span></label>
+      <input type="tel" name="phone" id="phone" size="13" placeholder="010-0000-0000">
+    </div>
+    <div class="form-group">
+      <label for="homepage">홈 페이지</label>
+      <input type="url" name="homepage" id="homepage" size="30" placeholder="http://">
+    </div>
+    <div class="form-group">
+      <label for="address">주소<span class="star">*</span></label>
+      <input type="text" id="address" name="address" size="30">
+    </div>
   </div>
 
   <div>
     <p class="text-start bg-success text-white">학력</p>
-    <p><label for="university">학교명<span class="star">*</span></label></p>
-    <p><input type="text" id="university" name="university" size="12"></p>
-    <p><label for="major">전공<span class="star">*</span></label></p>
-    <p><input type="text" id="major" name="major" size="12"></p>
-    <p><label for ="graduate">졸업 여부<span class="star">*</span></label></p>
-    <p><select name="graduate" id="graduate">
-      <option value="0">---선택---</option> <option value="1">졸업예정</option> <option value="2">졸업</option>
-     </select></p>
-    <p><label for ="grad_date">졸업(예정)년도<span class="star">*</span></label></p>
-    <p><input type ="date" id ="grad_date" name ="grad_date"></p>
- </div>
+    <div class="form-container">
+      <div class="form-group">
+        <label for="university">학교명<span class="star">*</span></label>
+        <input type="text" id="university" name="university" size="12">
+      </div>
+      <div class="form-group">
+        <label for="major">전공<span class="star">*</span></label>
+        <input type="text" id="major" name="major" size="12">
+      </div>
+      <div class="form-group">
+        <label for ="graduate">졸업 여부<span class="star">*</span></label>
+        <select name="graduate" id="graduate">
+          <option value="0">---선택---</option> <option value="1">졸업예정</option> <option value="2">졸업</option>
+        </select></div>
+      <div class="form-group">
+        <label for ="grad_date">졸업(예정)년도<span class="star">*</span></label>
+        <input type ="date" id ="grad_date" name ="grad_date">
+      </div>
+    </div>
 
-  <div>
-    <p class="text-start bg-secondary text-white">업무 경력</p>
-    <p>최종 직위
-      <label><input type="radio" name="직위" id="g1" value="employee" checked>사원급</label>
-      <input type="radio" name="직위" id="g2" value="chief"><label for="g2">대리 ~ 과장</label>
-      <input type="radio" name="직위" id="g3" value="head"><label for="g3">차장급 이상</label>
-      <label><input type="radio" name="직위" id="g4" value="board">임원급</label>
-    </p>
-    <p><label>주요 담당 업무</label></p>
-    <label for="comments"></label><textarea id="comments" name="comments" cols="80" rows="10" placeholder="담당했던 주요 업무를 기술하시오."></textarea>
-    <div class="button-container">
-  <p>
-    <button type="submit" class="btn btn-outline-primary">제출</button>
-    <button type="reset" class="btn btn-outline-primary">재작성</button>
-  </p></div>
-  </div>
+    <div>
+      <p class="text-start bg-secondary text-white">업무 경력</p>
+      <div class="form-group">
+        <label>최종 직위<input type="radio" name="직위" id="g1" value="employee" checked>사원급</label>
+        <input type="radio" name="직위" id="g2" value="chief"><label for="g2">대리 ~ 과장</label>
+        <input type="radio" name="직위" id="g3" value="head"><label for="g3">차장급 이상</label>
+        <label><input type="radio" name="직위" id="g4" value="board">임원급</label>
+      </div>
+      <div class="form-group">
+        <label>주요 담당 업무</label>
+        <label for="comments"></label><textarea id="comments" name="comments" cols="80" rows="10" placeholder="담당했던 주요 업무를 기술하시오."></textarea>
+      </div>
+      <div class="button-container">
+        <p><button type="submit" class="btn btn-outline-primary">제출</button>
+        <button type="reset" class="btn btn-outline-primary">재작성</button></p></div>
+      </div>
+    </div>
 
 </form>
 </div>
