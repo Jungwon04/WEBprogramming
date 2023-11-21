@@ -11,6 +11,12 @@
   .star {
     color: red;
   }
+
+
+  .button-container {
+    text-align: center;
+  }
+
 </style>
 </head>
 <body>
@@ -62,7 +68,11 @@
     </p>
     <p><label>주요 담당 업무</label></p>
       <textarea id="comments" name="comments" cols="80" rows="10" placeholder="담당했던 주요 업무를 기술하시오."></textarea>
-    <p><input type="submit" value="제출"> <input type="reset" value="재작성"></p>
+    <div class="button-container">
+  <p>
+    <button type="button" class="btn btn-outline-primary">제출</button>
+    <button type="button" class="btn btn-outline-primary">재작성</button>
+  </p></div>
   </div>
 
 </form>
