@@ -1,14 +1,14 @@
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
+.skills{
   height: 60px;
   display: block;
   background: none;
   border-radius: 0;
 }
 
-.skills .progress .skill {
+.skills .skill {
   padding: 10px 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
@@ -18,7 +18,7 @@
   color: #222222;
 }
 
-.skills .progress .skill .val {
+.skills .skill {
   float: right;
   font-style: normal;
 }
