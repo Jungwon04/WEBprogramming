@@ -95,8 +95,6 @@
 }
 
 .counts .image {
-  background: url("../img/plan.jpeg") center center no-repeat;
-  background-size: cover;
   min-height: 400px;
 }
 
@@ -114,4 +112,9 @@
   .counts .image img {
     max-width: 100%;
   }
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
 }
